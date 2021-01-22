@@ -10,8 +10,8 @@ function App() {
   useEffect(() => {
     api.get('repositories').then(response => {
       setRepository(response.data)
-    }, [])
-  })
+    })
+  }, [])
 
   async function handleAddRepository() {
     const response = await api.post('repositories', {
